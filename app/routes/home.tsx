@@ -4,6 +4,8 @@ import { Header } from "./header"
 import { Hero } from "../routes/hero"
 import { Skills } from "./skills";
 import { Projects } from "./projects";
+import { AboutMe } from "./aboutme";
+import { Contact } from "./contact";
 
 export function meta({ }: Route.MetaArgs) {
   return [
@@ -19,6 +21,8 @@ export default function Home() {
       <Hero />
       <Skills />
       <Projects />
+      <AboutMe />
+      <Contact />
     </>
   )
 }

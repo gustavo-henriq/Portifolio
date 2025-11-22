@@ -1,0 +1,56 @@
+.contactContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    width: 70%;
+    margin: 5rem auto 0 auto;
+    gap: 6rem;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contactForm input {
+    padding: 0.5rem;
+    padding-left: 0.8rem;
+    border: 1px solid #111111;
+    border-radius: 0.2rem;
+}
+
+.contactForm textarea {
+    width: 25rem;
+    height: 10rem;
+    padding-left: 0.8rem;
+    border: 1px solid #111111;
+    border-radius: 0.2rem;
+}
+
+.contactButtons {
+    display: flex;
+    gap: 1rem;
+}
+
+.contactButtons button {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0.2rem;
+    border: none;
+    background-color: #111111;
+    color: white;
+}
+
+.contactButtons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    border: 1px solid #111111;
+    border-radius: 0.2rem;
+    padding: 0.7rem;
+}

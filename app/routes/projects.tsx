@@ -10,7 +10,7 @@ const projects = [
 export function Projects() {
     return (
         <div className="projectsContainer">
-            <h1 className="projectsHeadliner"><b>Projects</b></h1>
+            <h1 className="projectsHeadliner"><span className="bold">Projects</span></h1>
             <div className="projects">
                 {projects.map((project) => {
                     return (

@@ -18,7 +18,7 @@ const skills = [
 export function Skills() {
     return (
         <div className="skillsContainer">
-            <h1 className="skillsHeadline">My <b>Skills</b></h1>
+            <h1 className="skillsHeadline">My <span className="bold">Skills</span></h1>
             <div className="skills">
                 {skills.map((skill) => {
                     const Icon = skill.icon;

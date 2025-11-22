@@ -1,0 +1,29 @@
+.aboutmeContainer {
+    display: flex;
+    justify-content: center;
+    gap: 3.5rem;
+    margin-top: 8rem;
+}
+
+.aboutmeImage {
+    background-color: black;
+    width: 28rem;
+    height: 24rem;
+}
+
+.aboutmeContent {
+    margin-top: 2.3rem;
+    display: flex;
+    width: 28rem;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.aboutmeHeadliner {
+    text-align: left;
+    font-size: 1.8rem;
+}
+
+.aboutmeText {
+    color: #71717A;
+}

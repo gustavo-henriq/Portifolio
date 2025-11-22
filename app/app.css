@@ -16,3 +16,7 @@ body {
     color-scheme: dark;
   }
 }
+
+.bold {
+  font-weight: 800;
+}

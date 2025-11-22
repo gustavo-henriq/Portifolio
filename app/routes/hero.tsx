@@ -7,13 +7,13 @@ export function Hero() {
                 <div className="blob2"></div>
 
                 <h1 className="heroHeadline">
-                    Hello, I'm <b>Henrik</b>
+                    Hello, I'm <span className="bold">Henrik</span>
                 </h1>
                 <h1 className="heroSubline">
-                    <b>Fullstack Developer</b>
+                    <span className="bold">Fullstack Developer</span>
                 </h1>
                 <h1 className="heroSubline">
-                    Based in <b>Brazil.</b>
+                    Based in <span className="bold">Brazil.</span>
                 </h1>
                 <h1 className="heroDescription">
                     I'm a fullstack developer with a passion for creating innovative and user-friendly web applications.
