@@ -1,0 +1,52 @@
+.projectsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.projectsHeadliner {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bolder;
+}
+
+.projects {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.project {
+    display: flex;
+    width: 22rem;
+    height: 22rem;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    gap: 1rem;
+    border: 1px solid #000000;
+    border-radius: 0.2em;
+    padding: 1rem;
+    transition: transform 0.1s ease-in-out;
+}
+
+.project:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.projectTitle {
+    font-size: 1.8rem;
+    margin-left: 0;
+    font-weight: 700;
+}
+
+.projectDescription {
+    font-size: 0.9rem;
+    color: #71717A;
+}

@@ -1,0 +1,51 @@
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    font-weight: 550;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: 5rem;
+}
+
+.logoImg {
+    width: 2rem;
+    height: 2rem;
+    background-color: #000000;
+}
+
+.headerList {
+    display: flex;
+    gap: 1rem;
+}
+
+.headerList li {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s ease;
+}
+
+.headerList li:hover {
+    background-color: #e7e7e7;
+    color: #000000;
+}
+
+.cvDownload {
+    background-color: #000000;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    transition: transform 0.08s ease;
+}
+
+.cvDownload:hover {
+    transform: scale(1.03);
+}

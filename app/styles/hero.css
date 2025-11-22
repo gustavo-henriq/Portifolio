@@ -1,0 +1,85 @@
+.heroContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.heroText {
+    width: 40%;
+    position: relative;
+    z-index: 1;
+}
+
+.heroHeadline {
+    font-size: 2rem;
+    letter-spacing: -2%;
+    line-height: 2.7rem;
+}
+
+.heroSubline {
+    font-size: 2rem;
+    letter-spacing: -2%;
+    line-height: 2.7rem;
+}
+
+.heroDescription {
+    margin-top: 1rem;
+    width: 70%;
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: #71717A;
+}
+
+.heroCTA {
+    margin-top: 1rem;
+    width: 30%;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    padding: 0.7rem;
+    border-radius: 0.3rem;
+    transition: all 0.08s ease-in-out;
+}
+
+.heroCTA:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.heroImage {
+    position: relative;
+    z-index: 1;
+    background-color: black;
+    width: 25%;
+    height: 70%;
+}
+
+.blob {
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    width: 100%;
+    height: 100%;
+    background: #172eaf;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    filter: blur(60px);
+    opacity: 0.17;
+    z-index: -1;
+}
+
+.blob2 {
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 60%;
+    height: 100%;
+    background: #fd1fd8;
+    border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
+    filter: blur(60px);
+    opacity: 0.17;
+    z-index: -1;
+}
