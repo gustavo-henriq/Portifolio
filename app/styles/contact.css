@@ -4,8 +4,9 @@
     justify-content: center;
     height: 50vh;
     width: 70%;
-    margin: 5rem auto 0 auto;
+    margin: 7rem auto 0 auto;
     gap: 6rem;
+
 }
 
 .contactForm {
@@ -53,4 +54,10 @@
     border: 1px solid #111111;
     border-radius: 0.2rem;
     padding: 0.7rem;
+}
+
+.contactDescription {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }

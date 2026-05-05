@@ -1,9 +1,16 @@
 .headerContainer {
+    background-color: #F9F9FA;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
     font-weight: 550;
+    position: fixed;
+    /*keep it 3 so it does cover the hero content when scrolled down*/
+    z-index: 3;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 .logo {

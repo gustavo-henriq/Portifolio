@@ -24,7 +24,7 @@ export function Contact() {
             <div className="contactDescription">
                 <p className="contactHeadliner">Let's get in touch!</p>
                 <p><span className="bold">gustavo.hs369@gmail.com</span></p>
-                <p><span className="bold">+55 81 99515-4915</span></p>
+                <p><span className="bold">+55 81 99515----</span></p>
             </div>
         </div>
     )
