@@ -1,15 +1,24 @@
 import "../styles/aboutme.css"
-export function AboutMe() {
+import { Reveal } from "../components/Reveal"
+import type { Language } from "../types"
+
+export function AboutMe({ language }: { language: Language }) {
     return (
-        <div className="aboutmeContainer">
+        <Reveal id="about" className="aboutmeContainer">
             <div className="aboutmeImage">
             </div>
             <div className="aboutmeContent">
-                <h1 className="aboutmeHeadliner">About <span className="bold">Me</span></h1>
+                <h2 className="aboutmeHeadliner">
+                    {language === "en" ? "Who " : "Quem "}<span className="bold">{language === "en" ? "am I" : "sou eu"}</span>
+                </h2>
                 <div className="aboutmeText">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius sed recusandae voluptatem repudiandae odit! Unde quia deleniti voluptates animi, repellendus nobis minus nostrum et at laboriosam voluptatem voluptate iure sint.</p>
+                    <p>
+                        {language === "en"
+                            ? "I'm a fullstack developer from Brazil focused on building thoughtful web experiences with React, AI, and practical backend systems."
+                            : "Sou desenvolvedor fullstack do Brasil, focado em criar experiências web cuidadosas com React, IA e sistemas backend práticos."}
+                    </p>
                 </div>
             </div>
-        </div>
+        </Reveal>
     )
 }

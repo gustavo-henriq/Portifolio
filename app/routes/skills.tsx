@@ -1,6 +1,8 @@
-import { SiTypescript, SiJavascript, SiPython, SiReact, SiAngular, SiElectron, SiGit, SiVim, SiFigma, SiLinux, SiNextdotjs, SiNodedotjs, SiMysql, SiGooglecloud } from "react-icons/si";
+import { SiTypescript, SiJavascript, SiPython, SiReact, SiGit, SiLinux, SiNextdotjs, SiMysql, SiGooglecloud } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
 import '../styles/skills.css'
+import { Reveal } from "../components/Reveal";
+import type { Language } from "../types";
 
 const skills = [
     { name: "TypeScript", icon: SiTypescript },
@@ -15,21 +17,25 @@ const skills = [
     { name: "Linux", icon: SiLinux },
 ];
 
-export function Skills() {
+export function Skills({ language }: { language: Language }) {
     return (
-        <div className="skillsContainer">
-            <h1 className="skillsHeadline">My <span className="bold">Skills</span></h1>
+        <Reveal id="skills" className="skillsContainer">
+            <h2 className="skillsHeadline">
+                {language === "en" ? "My " : "Minhas "}<span className="bold">{language === "en" ? "Skills" : "Habilidades"}</span>
+            </h2>
             <div className="skills">
-                {skills.map((skill) => {
+                {skills.map((skill, index) => {
                     const Icon = skill.icon;
                     return (
-                        <div key={skill.name} className="skill">
-                            <Icon className="skillIcon" />
-                            <h2 className="skillTitle">{skill.name}</h2>
-                        </div>
+                        <Reveal key={skill.name} className="skill" delay={index * 70}>
+                            <span className="skillIconFrame">
+                                <Icon className="skillIcon" />
+                            </span>
+                            <h3 className="skillTitle">{skill.name}</h3>
+                        </Reveal>
                     );
                 })}
             </div>
-        </div>
+        </Reveal>
     )
 }

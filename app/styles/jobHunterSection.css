@@ -1,0 +1,389 @@
+.jobHunterSection {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    margin-inline: 0;
+    min-height: clamp(44rem, 96svh, 54rem);
+    padding-block: clamp(1rem, 2vw, 1.75rem);
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    overflow: visible;
+    isolation: isolate;
+}
+
+.jobHunterSpotlight {
+    position: absolute;
+    inset: -18% 0 -8%;
+    z-index: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(
+            ellipse at 50% 96%,
+            rgba(236, 72, 153, 0.11) 0%,
+            rgba(139, 92, 246, 0.07) 32%,
+            transparent 70%
+        );
+    opacity: 0;
+    will-change: transform, opacity;
+    transform: translate3d(0, 0, 0);
+}
+
+.jobHunterStage {
+    position: relative;
+    inset: auto;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 12rem;
+    padding: clamp(0.8rem, 1.6vw, 1.1rem) 0 0;
+    gap: clamp(0.85rem, 3vw, 2.2rem);
+    pointer-events: none;
+    transform: translateZ(0);
+}
+
+.jobFlowArrow {
+    position: relative;
+    flex: 0 0 clamp(2.2rem, 5vw, 4rem);
+    height: 1.25rem;
+    color: rgba(24, 24, 27, 0.42);
+    opacity: 0;
+    will-change: transform, opacity;
+    transform: translateZ(0);
+}
+
+.jobFlowArrow span {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: currentColor;
+    transform: translateY(-50%) scaleX(0);
+    transform-origin: 0% 50%;
+    will-change: transform;
+}
+
+.jobFlowArrow span::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    right: 0;
+    width: 0.48rem;
+    height: 0.48rem;
+    border-top: 1px solid currentColor;
+    border-right: 1px solid currentColor;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.jobLayerCard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: min(12.2rem, 23vw);
+    min-height: 10.4rem;
+    padding: clamp(0.9rem, 1.6vw, 1.1rem);
+    border: 1px solid currentColor;
+    border-radius: 0.85rem;
+    color: var(--layer-color);
+    background: var(--layer-bg);
+    box-shadow:
+        inset 0 0 0 1px rgba(255, 255, 255, 0.08),
+        0 20px 44px rgba(24, 24, 27, 0.08);
+    will-change: transform, opacity;
+    transform: translateZ(0);
+}
+
+.jobLayerCard.bronze {
+    --layer-color: rgba(178, 88, 45, 0.86);
+    --layer-bg: linear-gradient(135deg, rgba(178, 88, 45, 0.12), rgba(178, 88, 45, 0.04));
+}
+
+.jobLayerCard.silver {
+    --layer-color: rgba(113, 113, 122, 0.86);
+    --layer-bg: linear-gradient(135deg, rgba(113, 113, 122, 0.12), rgba(113, 113, 122, 0.04));
+}
+
+.jobLayerCard.gold {
+    --layer-color: rgba(180, 124, 20, 0.92);
+    --layer-bg: linear-gradient(135deg, rgba(180, 124, 20, 0.14), rgba(180, 124, 20, 0.04));
+}
+
+.jobLayerIcon {
+    display: grid;
+    place-items: center;
+    width: 2.45rem;
+    height: 2.45rem;
+    border-radius: 0.62rem;
+    background: rgba(255, 255, 255, 0.46);
+    box-shadow: inset 0 0 0 1px rgba(24, 24, 27, 0.06);
+}
+
+.jobLayerIcon svg {
+    width: 1.35rem;
+    height: 1.35rem;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.jobLayerCard h3 {
+    margin-top: 0.78rem;
+    color: #111111;
+    font-size: clamp(1rem, 1.55vw, 1.18rem);
+    font-weight: 850;
+    line-height: 1.1;
+}
+
+.jobLayerCard p {
+    margin-top: 0.45rem;
+    color: #52525b;
+    font-size: 0.78rem;
+    font-weight: 650;
+    line-height: 1.55;
+}
+
+.jobHunterContent {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: min(61rem, calc(100% - 2.5rem));
+    padding: clamp(1.25rem, 2.6vw, 1.85rem);
+    border: 1px solid rgba(24, 24, 27, 0.08);
+    border-radius: 0.5rem;
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.58), rgba(255, 255, 255, 0.3)),
+        rgba(249, 249, 250, 0.46);
+    box-shadow: 0 24px 56px rgba(24, 24, 27, 0.07);
+    backdrop-filter: blur(12px) saturate(1.08);
+    transform: translateZ(0);
+}
+
+.jobHunterSubtitle {
+    max-width: 34rem;
+    color: #111111;
+    font-size: clamp(1.15rem, 2vw, 1.45rem);
+    font-weight: 850;
+    line-height: 1.35;
+}
+
+.jobHunterDescription {
+    margin-top: 1rem;
+    max-width: 38rem;
+    color: #52525b;
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.jobHunterChainPanel {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0.45rem;
+    will-change: height, opacity, transform;
+    contain: paint;
+    transform: translateZ(0);
+}
+
+.jobHunterChainIntro {
+    display: grid;
+    gap: 0.35rem;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.9rem 0 0;
+    border-top: 1px solid rgba(24, 24, 27, 0.09);
+}
+
+.jobHunterChainIntro span {
+    color: #111111;
+    font-size: 0.78rem;
+    font-weight: 850;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.jobHunterChainIntro p {
+    max-width: 42rem;
+    color: #52525b;
+    font-size: 0.92rem;
+    font-weight: 650;
+    line-height: 1.65;
+}
+
+.jobHunterTags {
+    margin-top: 0;
+    color: #3f3f46;
+    font-size: 0.86rem;
+    font-weight: 800;
+    line-height: 1.6;
+}
+
+.jobHunterFooter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 1.1rem;
+    padding-top: 0.95rem;
+    border-top: 1px solid rgba(24, 24, 27, 0.08);
+}
+
+.jobHunterActions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.85rem;
+}
+
+.jobHunterStatus {
+    display: inline-flex;
+    margin-top: 0;
+    border: 1px solid rgba(23, 46, 175, 0.22);
+    border-radius: 999px;
+    background: linear-gradient(135deg, rgba(23, 46, 175, 0.08), rgba(253, 31, 216, 0.08));
+    color: #27272a;
+    font-size: 0.78rem;
+    font-weight: 850;
+    padding: 0.42rem 0.75rem;
+}
+
+.jobHunterLink {
+    display: inline-flex;
+    margin-top: 0;
+    border-bottom: 1px solid currentColor;
+    color: #111111;
+    font-weight: 850;
+    text-decoration: none;
+    transition:
+        color 0.18s ease,
+        transform 0.18s ease;
+}
+
+.jobHunterLink:hover {
+    color: #172eaf;
+    transform: translateY(-2px);
+}
+
+@media (min-width: 769px) {
+    .jobHunterChainPanel {
+        height: 0;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-0.65rem) translateZ(0);
+    }
+
+    .jobLayerCard {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .jobHunterSection {
+        height: auto;
+        min-height: auto;
+        padding: 1rem;
+        overflow: visible;
+        background: transparent;
+    }
+
+    .jobHunterStage {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        min-height: auto;
+        margin-top: 1rem;
+        padding-top: 0;
+    }
+
+    .jobLayerCard {
+        width: 100%;
+        min-height: auto;
+        opacity: 1;
+        transform: none;
+    }
+
+    .jobFlowArrow {
+        display: none;
+    }
+
+    .jobHunterContent {
+        width: 100%;
+        padding: 1.2rem;
+    }
+
+    .jobHunterChainPanel {
+        height: auto;
+        opacity: 1;
+        transform: none;
+    }
+
+    .jobHunterFooter {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .jobHunterActions {
+        justify-content: flex-start;
+    }
+}
+
+html.dark-theme .jobHunterSection {
+    background: transparent;
+    box-shadow: none;
+}
+
+html.dark-theme .jobHunterContent {
+    border-color: rgba(244, 244, 245, 0.08);
+    background:
+        linear-gradient(135deg, rgba(24, 24, 27, 0.72), rgba(24, 24, 27, 0.42)),
+        rgba(9, 9, 11, 0.62);
+    box-shadow: 0 24px 56px rgba(0, 0, 0, 0.22);
+}
+
+html.dark-theme .jobLayerCard h3,
+html.dark-theme .jobHunterSubtitle,
+html.dark-theme .jobHunterLink,
+html.dark-theme .jobHunterChainIntro span {
+    color: #f4f4f5;
+}
+
+html.dark-theme .jobLayerCard p,
+html.dark-theme .jobHunterDescription,
+html.dark-theme .jobHunterTags,
+html.dark-theme .jobHunterChainIntro p {
+    color: #a1a1aa;
+}
+
+html.dark-theme .jobHunterChainIntro {
+    border-color: rgba(244, 244, 245, 0.08);
+}
+
+html.dark-theme .jobHunterFooter {
+    border-color: rgba(244, 244, 245, 0.08);
+}
+
+html.dark-theme .jobHunterStatus {
+    border-color: rgba(143, 160, 255, 0.28);
+    background: linear-gradient(135deg, rgba(111, 130, 255, 0.14), rgba(255, 101, 231, 0.1));
+    color: #f4f4f5;
+}
+
+html.dark-theme .jobLayerIcon {
+    background: rgba(39, 39, 42, 0.62);
+    box-shadow: inset 0 0 0 1px rgba(244, 244, 245, 0.08);
+}
+
+html.dark-theme .jobFlowArrow {
+    color: rgba(244, 244, 245, 0.42);
+}

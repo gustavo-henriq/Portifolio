@@ -1,29 +1,54 @@
 import "../styles/hero.css"
-export function Hero() {
-    return (
-        <div className="heroContainer">
-            <div className="heroText">
-                <div className="blob"></div>
-                <div className="blob2"></div>
+import { Reveal } from "../components/Reveal"
+import type { Language } from "../types"
 
+export function Hero({ language }: { language: Language }) {
+    function scrollToContact() {
+        document.getElementById("contact")?.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+        });
+    }
+
+    return (
+        <Reveal id="home" className="heroContainer">
+            <div className="heroText">
                 <h1 className="heroHeadline">
-                    Hello, I'm <span className="bold">Henrik</span>
+                    {language === "en" ? "Hello, I'm " : "Olá, eu sou "}<span className="bold">Gustavo</span>
                 </h1>
-                <h1 className="heroSubline">
-                    <span className="bold">Fullstack Developer</span>
-                </h1>
-                <h1 className="heroSubline">
-                    Based in <span className="bold">Brazil.</span>
-                </h1>
-                <h1 className="heroDescription">
-                    I'm a fullstack developer with a passion for creating innovative and user-friendly web applications.
-                </h1>
-                <button className="heroCTA">
-                    Contact Me
+                <p className="heroSubline">
+                    <span className="bold">{language === "en" ? "Fullstack Developer" : "Desenvolvedor Fullstack"}</span>
+                </p>
+                <p className="heroSubline">
+                    {language === "en" ? "Based in " : "Baseado no "}<span className="bold">{language === "en" ? "Brazil." : "Brasil."}</span>
+                </p>
+                <p className="heroDescription">
+                    {language === "en"
+                        ? "I build full-stack applications powered by AI — turning complex problems into clean, working software. Based in Brazil, available for remote work worldwide."
+                        : "Crio aplicações full-stack com IA — transformando problemas complexos em software limpo e funcional. Do Brasil, disponível para trabalho remoto no mundo todo."}
+                </p>
+                <p className="heroCredibility">
+                    {language === "en" ? "Open to remote roles · AI & React" : "Aberto a remoto · IA & React"}
+                </p>
+                <button className="heroCTA" onClick={scrollToContact}>
+                    <span>{language === "en" ? "Contact Me" : "Entre em Contato"}</span>
                 </button>
             </div>
-            <div className="heroImage">
+            <div className="heroVisual">
+                <div className="heroBackdrop" aria-hidden="true">
+                    <span className="heroColorField" />
+                    <span className="heroGrid" />
+                    <span className="heroHorizon" />
+                </div>
+                <img
+                    className="heroAvatar"
+                    src="/images/gustavo-avatar.webp"
+                    alt={language === "en" ? "3D avatar of Gustavo" : "Avatar 3D de Gustavo"}
+                    width="353"
+                    height="443"
+                />
+                <span className="heroAvatarShadow" aria-hidden="true" />
             </div>
-        </div>
+        </Reveal>
     )
 }
