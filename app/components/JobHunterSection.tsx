@@ -91,6 +91,7 @@ export function JobHunterSection({ language }: { language: Language }) {
 
         let context: { revert: () => void } | null = null;
         let cancelled = false;
+        let refreshFrame = 0;
 
         void Promise.all([
             import("gsap"),
@@ -178,15 +179,20 @@ export function JobHunterSection({ language }: { language: Language }) {
                     }, 0.66)
                     .to(spotlight, { yPercent: -8, opacity: 1, duration: 0.34 }, 0.52);
 
-                window.requestAnimationFrame(() => ScrollTrigger.refresh());
+                refreshFrame = window.requestAnimationFrame(() => {
+                    if (!cancelled) {
+                        ScrollTrigger.refresh();
+                    }
+                });
             }, section);
         });
 
         return () => {
             cancelled = true;
+            window.cancelAnimationFrame(refreshFrame);
             context?.revert();
         };
-    }, [language]);
+    }, []);
 
     return (
         <section ref={sectionRef} className="jobHunterSection" aria-label={language === "en" ? "Job Hunter case study" : "Estudo de caso Job Hunter"}>
